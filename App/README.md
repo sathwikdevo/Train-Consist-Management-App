@@ -1,32 +1,29 @@
-# 🚆 Train Consist Management App – UC19
+# 🚆 Train Consist Management App – UC20
 
 Overview:
-This use case demonstrates Binary Search for efficient bogie lookup.
+This use case prevents searching on an empty train using defensive programming.
 
 Use Case:
-- Use sorted bogie ID array
-- Accept search input
-- Apply binary search logic
-- Display result
+- User triggers search
+- System checks if bogie list is empty
+- Throws exception if empty
+- Stops execution immediately
 
 Concepts Used:
-- Binary Search
-- Divide and Conquer
-- compareTo()
-- O(log n) efficiency
-
-Important Rule:
-Array must be sorted before searching
+- Defensive Programming
+- IllegalStateException
+- Fail-Fast Principle
+- State Validation
 
 Sample Output:
-Enter Bogie ID to search: BG309
-Bogie Found: BG309
+Exception in thread "main" java.lang.IllegalStateException:
+Cannot perform search: Train consist is empty
 
 How to Run:
 javac TrainConsistApp.java
 java TrainConsistApp
 
 Key Benefits:
-- Faster than linear search
-- Efficient for large data
-- Introduces optimized searching
+- Prevents invalid operations
+- Improves reliability
+- Enforces correct system state

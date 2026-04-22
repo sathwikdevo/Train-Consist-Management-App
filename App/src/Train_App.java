@@ -6,35 +6,29 @@ public class TrainConsistApp {
 
         System.out.println("=== Train Consist Management App ===");
 
-        // Sorted bogie IDs (IMPORTANT for Binary Search)
-        String[] bogieIds = {"BG101", "BG205", "BG309", "BG412", "BG550"};
+        // Empty bogie list (to simulate failure case)
+        List<String> bogieIds = new ArrayList<>();
 
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter Bogie ID to search: ");
         String key = sc.nextLine();
 
-        int low = 0;
-        int high = bogieIds.length - 1;
+        // Defensive check
+        if (bogieIds.isEmpty()) {
+            throw new IllegalStateException("Cannot perform search: Train consist is empty");
+        }
+
+        // (This part will not execute if empty)
         boolean found = false;
 
-        // Binary Search
-        while (low <= high) {
-            int mid = (low + high) / 2;
-
-            int result = key.compareTo(bogieIds[mid]);
-
-            if (result == 0) {
+        for (String id : bogieIds) {
+            if (id.equals(key)) {
                 found = true;
                 break;
-            } else if (result > 0) {
-                low = mid + 1;
-            } else {
-                high = mid - 1;
             }
         }
 
-        // Display result
         if (found) {
             System.out.println("Bogie Found: " + key);
         } else {
