@@ -6,7 +6,7 @@ public class TrainConsistApp {
 
         System.out.println("=== Train Consist Management App ===");
 
-        // Array of bogie IDs
+        // Sorted bogie IDs (IMPORTANT for Binary Search)
         String[] bogieIds = {"BG101", "BG205", "BG309", "BG412", "BG550"};
 
         Scanner sc = new Scanner(System.in);
@@ -14,13 +14,23 @@ public class TrainConsistApp {
         System.out.print("Enter Bogie ID to search: ");
         String key = sc.nextLine();
 
+        int low = 0;
+        int high = bogieIds.length - 1;
         boolean found = false;
 
-        // Linear Search
-        for (String id : bogieIds) {
-            if (id.equals(key)) {
+        // Binary Search
+        while (low <= high) {
+            int mid = (low + high) / 2;
+
+            int result = key.compareTo(bogieIds[mid]);
+
+            if (result == 0) {
                 found = true;
                 break;
+            } else if (result > 0) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
             }
         }
 
