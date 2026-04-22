@@ -1,17 +1,18 @@
 import java.util.*;
 import java.util.stream.*;
 
-class Bogie {
-    String name;
-    int capacity;
+// Goods Bogie class
+class GoodsBogie {
+    String type;
+    String cargo;
 
-    Bogie(String name, int capacity) {
-        this.name = name;
-        this.capacity = capacity;
+    GoodsBogie(String type, String cargo) {
+        this.type = type;
+        this.cargo = cargo;
     }
 
     public String toString() {
-        return name + " - Capacity: " + capacity;
+        return type + " - Cargo: " + cargo;
     }
 }
 
@@ -21,19 +22,27 @@ public class TrainConsistApp {
 
         System.out.println("=== Train Consist Management App ===");
 
-        // Create bogie list
-        List<Bogie> bogies = new ArrayList<>();
-        bogies.add(new Bogie("Sleeper", 72));
-        bogies.add(new Bogie("AC Chair", 56));
-        bogies.add(new Bogie("First Class", 40));
+        // Create goods bogie list
+        List<GoodsBogie> bogies = new ArrayList<>();
+        bogies.add(new GoodsBogie("Cylindrical", "Petroleum"));
+        bogies.add(new GoodsBogie("Open", "Coal"));
+        bogies.add(new GoodsBogie("Box", "Grain"));
 
-        // Calculate total seating capacity using reduce()
-        int totalSeats = bogies.stream()
-                .map(b -> b.capacity)
-                .reduce(0, Integer::sum);
+        // Safety validation using allMatch()
+        boolean isSafe = bogies.stream()
+                .allMatch(b -> {
+                    if (b.type.equals("Cylindrical")) {
+                        return b.cargo.equals("Petroleum");
+                    }
+                    return true;
+                });
 
         // Display result
-        System.out.println("Total Seating Capacity: " + totalSeats);
+        if (isSafe) {
+            System.out.println("Train is SAFE for operation");
+        } else {
+            System.out.println("Train is NOT SAFE for operation");
+        }
 
         System.out.println("Program continues...");
     }

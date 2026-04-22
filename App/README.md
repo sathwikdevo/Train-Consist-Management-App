@@ -1,34 +1,33 @@
-# 🚆 Train Consist Management App – UC10
+# 🚆 Train Consist Management App – UC12
 
 Overview:
-This application simulates train consist management.
-
-UC10 calculates total seating capacity using Stream reduce().
+This use case validates safety compliance of goods bogies using Stream API.
 
 Use Case:
-- Create bogie list
+- Create goods bogie list
 - Convert to stream
-- Extract capacities using map()
-- Aggregate using reduce()
-- Display total capacity
+- Apply allMatch()
+- Validate cylindrical cargo rule
+- Display safety result
 
 Concepts Used:
 - Stream API
-- map()
-- reduce()
-- Method Reference (Integer::sum)
-- Functional Programming
+- allMatch()
+- Lambda Expressions
+- Conditional Logic
+- Business Rule Validation
+
+Rule:
+Cylindrical bogie → only Petroleum allowed
 
 Sample Output:
-=== Train Consist Management App ===
-Total Seating Capacity: 168
-Program continues...
+Train is SAFE for operation
 
 How to Run:
 javac TrainConsistApp.java
 java TrainConsistApp
 
 Key Benefits:
-- Provides total capacity metric
-- Reduces manual computation
-- Enables analytics
+- Ensures safety compliance
+- Prevents invalid cargo
+- Improves system reliability
