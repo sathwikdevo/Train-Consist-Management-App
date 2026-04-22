@@ -1,33 +1,28 @@
-# 🚆 Train Consist Management App – UC12
+# 🚆 Train Consist Management App – UC13
 
 Overview:
-This use case validates safety compliance of goods bogies using Stream API.
+This use case compares performance of loop-based and stream-based filtering.
 
 Use Case:
-- Create goods bogie list
-- Convert to stream
-- Apply allMatch()
-- Validate cylindrical cargo rule
-- Display safety result
+- Create bogie dataset
+- Measure loop execution time
+- Measure stream execution time
+- Compare results
 
 Concepts Used:
-- Stream API
-- allMatch()
-- Lambda Expressions
-- Conditional Logic
-- Business Rule Validation
+- System.nanoTime()
+- Performance Benchmarking
+- Loop vs Stream
+- Filtering Logic
 
-Rule:
-Cylindrical bogie → only Petroleum allowed
-
-Sample Output:
-Train is SAFE for operation
+Output:
+Displays execution time in nanoseconds
 
 How to Run:
 javac TrainConsistApp.java
 java TrainConsistApp
 
 Key Benefits:
-- Ensures safety compliance
-- Prevents invalid cargo
-- Improves system reliability
+- Helps choose efficient approach
+- Demonstrates benchmarking
+- Encourages data-driven decisions
