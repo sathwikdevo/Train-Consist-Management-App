@@ -1,4 +1,10 @@
-Use Case 3: Track Unique Bogie IDs
+Overview
+
+The Train Consist Management App is a console-based Java application that simulates how a railway system manages a train’s consist, which is a collection of bogies attached to an engine.
+
+In this use case (UC4), the application focuses on maintaining the correct order of bogies using LinkedList.
+
+🎯 Use Case 4: Maintain Ordered Train Consist
 🧑 Actor
 
 User
@@ -6,34 +12,41 @@ User
 🔄 Flow
 
 User runs the program
-Bogie IDs are added
-Duplicate IDs are inserted intentionally
-System stores IDs in HashSet
-Duplicates are automatically ignored
-Final unique IDs are displayed
+Bogies are added to the train
+Pantry Car is inserted at a specific position
+First and last bogies are removed
+Final ordered consist is displayed
 
 💻 Features Implemented
 
-Storage of bogie IDs using HashSet
-Automatic removal of duplicate IDs
-Display of unique bogie IDs
+Maintaining ordered train consist
+Insertion at specific position
+Removal from beginning and end
+Display of final train structure
 
 🧠 Concepts Used
 
-Set – Collection that does not allow duplicates
-HashSet – Implementation of Set using hashing
-add() – Inserts elements into the set
-Automatic Deduplication – Prevents duplicate entries
-Unordered Storage – Elements are not stored in order
+LinkedList – Doubly linked list implementation
+Node Structure – Elements linked via previous and next references
+add() – Adds elements
+add(index, element) – Inserts at specific position
+removeFirst() – Removes first element
+removeLast() – Removes last element
+Order Preservation – Maintains sequence of bogies
 
 📊 Sample Output
 
 === Train Consist Management App ===
-Unique Bogie IDs in Train:
-[BG101, BG102, BG103]
-Program continues...
+Initial Train Consist:
+[Engine, Sleeper, AC, Cargo, Guard]
 
-(Note: Order may vary because HashSet is unordered)
+After adding Pantry Car at position 2:
+[Engine, Sleeper, Pantry Car, AC, Cargo, Guard]
+
+Final Train Consist:
+[Sleeper, Pantry Car, AC, Cargo]
+
+Program continues...
 
 🚀 How to Run
 
@@ -43,7 +56,7 @@ Run using java TrainConsistApp
 
 🌱 Key Benefits
 
-Ensures uniqueness of bogie IDs
-Prevents duplicate data issues
-Introduces Set data structure
-Improves data integrity in system
+Maintains real-world train order
+Efficient insertion and deletion
+Demonstrates LinkedList usage
+Helps visualize train chaining structure
