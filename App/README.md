@@ -43,7 +43,63 @@ Bogie: AC Chair | Capacity: 60
 Bogie: First Class | Capacity: 40
 Program continues...
 
+🚀 How to RunOverview
+
+The Train Consist Management App is a console-based Java application that simulates how a railway system manages a train’s consist.
+
+In this use case (UC7), the application sorts passenger bogies based on their seating capacity using a custom Comparator.
+
+🎯 Use Case 7: Sort Bogies by Capacity
+🧑 Actor
+
+User
+
+🔄 Flow
+
+User runs the program
+Bogie objects are created
+Bogies are stored in a list
+Comparator is applied for sorting
+Sorted bogies are displayed
+Program continues
+
+💻 Features Implemented
+
+Creation of custom Bogie objects
+Storage using List collection
+Sorting based on capacity
+Displaying sorted results
+
+🧠 Concepts Used
+
+Comparator – Defines custom sorting logic
+Custom Objects – Bogie class with name and capacity
+List – Stores multiple objects dynamically
+sort() – Sorts list using Comparator
+Lambda Expression – Simplifies comparison logic
+Separation of Data and Logic – Improves maintainability
+
+📊 Sample Output
+
+=== Train Consist Management App ===
+Bogies sorted by capacity:
+First Class - Capacity: 40
+AC Chair - Capacity: 56
+Sleeper - Capacity: 72
+Program continues...
+
 🚀 How to Run
+
+Save the file as TrainConsistApp.java
+Compile using javac TrainConsistApp.java
+Run using java TrainConsistApp
+
+🌱 Key Benefits
+
+Introduces object-based programming
+Applies real-world sorting logic
+Improves planning and comparison
+Demonstrates clean and scalable design
 
 Save the file as TrainConsistApp.java
 Compile using javac TrainConsistApp.java
