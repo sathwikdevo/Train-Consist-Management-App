@@ -1,28 +1,32 @@
-# 🚆 Train Consist Management App – UC13
+# 🚆 Train Consist Management App – UC14
 
 Overview:
-This use case compares performance of loop-based and stream-based filtering.
+This use case validates passenger bogie capacity using a custom exception.
 
 Use Case:
-- Create bogie dataset
-- Measure loop execution time
-- Measure stream execution time
-- Compare results
+- Create passenger bogie
+- Validate capacity in constructor
+- Throw exception if invalid
+- Handle exception using try-catch
 
 Concepts Used:
-- System.nanoTime()
-- Performance Benchmarking
-- Loop vs Stream
-- Filtering Logic
+- Custom Exception
+- Exception Inheritance
+- throw keyword
+- throws declaration
+- Fail-fast validation
 
-Output:
-Displays execution time in nanoseconds
+Rule:
+Capacity must be greater than 0
+
+Sample Output:
+Error: Capacity must be greater than zero
 
 How to Run:
 javac TrainConsistApp.java
 java TrainConsistApp
 
 Key Benefits:
-- Helps choose efficient approach
-- Demonstrates benchmarking
-- Encourages data-driven decisions
+- Prevents invalid data
+- Improves reliability
+- Enforces business rules
