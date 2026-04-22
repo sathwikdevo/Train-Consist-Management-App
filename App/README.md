@@ -1,8 +1,8 @@
-The Train Consist Management App is a console-based Java application that simulates train consist management.
+The Train Consist Management App is a console-based Java application that simulates train consist operations.
 
-In UC8, the system filters passenger bogies based on seating capacity using the Java Stream API.
+In UC9, the system groups bogies into categories using the Stream API and Collectors.groupingBy().
 
-🎯 Use Case 8: Filter Passenger Bogies Using Streams
+🎯 Use Case 9: Group Bogies by Type
 🧑 Actor
 
 User
@@ -11,32 +11,33 @@ User
 
 User runs the program
 Bogie list is created
-Stream is generated from the list
-filter() is applied
-Matching bogies are collected
-Filtered bogies are displayed
+Stream is generated
+groupingBy() is applied
+Bogies are grouped into categories
+Grouped data is displayed
 
 💻 Features Implemented
 
-Filtering bogies based on capacity
-Use of Stream API
-Creation of new filtered list
-Non-destructive processing (original list unchanged)
+Grouping bogies by type
+Transforming list into Map structure
+Displaying categorized bogies
+Non-destructive processing
 
 🧠 Concepts Used
 
-Stream API – Declarative data processing
-stream() – Converts list to stream
-filter() – Applies condition
-Lambda Expression – Defines filtering logic
-collect() – Converts stream back to list
-Declarative Style – Focus on “what” not “how”
+Stream API – Processes collections declaratively
+groupingBy() – Groups elements based on key
+Map – Stores grouped result
+Lambda Expression – Defines grouping logic
+Data Aggregation – Collects into structured form
 
 📊 Sample Output
 
 === Train Consist Management App ===
-Filtered Bogies (Capacity > 60):
-Sleeper - Capacity: 72
+Grouped Bogies by Type:
+Sleeper : [Sleeper - Capacity: 72, Sleeper - Capacity: 72]
+AC Chair : [AC Chair - Capacity: 56]
+First Class : [First Class - Capacity: 40]
 Program continues...
 
 🚀 How to Run
@@ -47,34 +48,33 @@ Run: java TrainConsistApp
 
 🌱 Key Benefits
 
-Reduces boilerplate code
-Improves readability
-Supports functional programming
-Keeps original data safe
-Enables flexible filtering
+Organizes data into categories
+Improves reporting clarity
+Introduces advanced stream operations
+Supports structured data analysis
 
 🧪 Test Case Scenarios
 
-testFilter_CapacityGreaterThanThreshold()
-→ Bogies with capacity > 70 should appear
+testGrouping_BogiesGroupedByType()
+→ Bogies with same type grouped together
 
-testFilter_CapacityEqualToThreshold()
-→ Bogies with capacity = 70 should NOT appear
+testGrouping_MultipleBogiesInSameGroup()
+→ Multiple bogies appear in same list
 
-testFilter_CapacityLessThanThreshold()
-→ Bogies with capacity < threshold should NOT appear
+testGrouping_DifferentBogieTypes()
+→ Different types appear as separate keys
 
-testFilter_MultipleBogiesMatching()
-→ All matching bogies should be returned
+testGrouping_EmptyBogieList()
+→ Returns empty Map
 
-testFilter_NoBogiesMatching()
-→ Result should be empty list
+testGrouping_SingleBogieCategory()
+→ Only one key present
 
-testFilter_AllBogiesMatching()
-→ All bogies should appear
+testGrouping_MapContainsCorrectKeys()
+→ Expected keys exist in Map
 
-testFilter_EmptyBogieList()
-→ Should return empty list without error
+testGrouping_GroupSizeValidation()
+→ Group sizes are correct
 
-testFilter_OriginalListUnchanged()
-→ Original list must remain unchanged
+testGrouping_OriginalListUnchanged()
+→ Original list remains unchanged
