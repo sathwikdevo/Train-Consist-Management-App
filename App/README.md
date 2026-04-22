@@ -1,20 +1,22 @@
-# 🚆 Train Consist Management App – UC18
+# 🚆 Train Consist Management App – UC19
 
 Overview:
-This use case demonstrates searching bogie IDs using Linear Search.
+This use case demonstrates Binary Search for efficient bogie lookup.
 
 Use Case:
-- Create array of bogie IDs
+- Use sorted bogie ID array
 - Accept search input
-- Traverse array sequentially
-- Compare using equals()
+- Apply binary search logic
 - Display result
 
 Concepts Used:
-- Linear Search
-- Sequential Traversal
-- equals() method
-- Early Termination
+- Binary Search
+- Divide and Conquer
+- compareTo()
+- O(log n) efficiency
+
+Important Rule:
+Array must be sorted before searching
 
 Sample Output:
 Enter Bogie ID to search: BG309
@@ -25,6 +27,6 @@ javac TrainConsistApp.java
 java TrainConsistApp
 
 Key Benefits:
-- Works on unsorted data
-- Simple implementation
-- Introduces searching basics
+- Faster than linear search
+- Efficient for large data
+- Introduces optimized searching
