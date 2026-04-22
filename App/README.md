@@ -1,28 +1,30 @@
-# 🚆 Train Consist Management App – UC17
+# 🚆 Train Consist Management App – UC18
 
 Overview:
-This use case demonstrates sorting bogie names using Arrays.sort().
+This use case demonstrates searching bogie IDs using Linear Search.
 
 Use Case:
-- Create array of bogie names
-- Call Arrays.sort()
-- Display sorted result
+- Create array of bogie IDs
+- Accept search input
+- Traverse array sequentially
+- Compare using equals()
+- Display result
 
 Concepts Used:
-- Arrays.sort()
-- Natural Ordering
-- O(n log n) Sorting
-- Java Standard Library
+- Linear Search
+- Sequential Traversal
+- equals() method
+- Early Termination
 
 Sample Output:
-Sorted Bogie Names:
-[AC Chair, First Class, General, Luxury, Sleeper]
+Enter Bogie ID to search: BG309
+Bogie Found: BG309
 
 How to Run:
 javac TrainConsistApp.java
 java TrainConsistApp
 
 Key Benefits:
-- Faster than manual sorting
-- Clean and simple code
-- Uses optimized Java algorithms
+- Works on unsorted data
+- Simple implementation
+- Introduces searching basics
