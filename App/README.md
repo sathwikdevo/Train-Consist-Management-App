@@ -1,8 +1,10 @@
+Overview
+
 The Train Consist Management App is a console-based Java application that simulates how a railway system manages a train’s consist, which is a collection of bogies attached to an engine.
 
-In this use case (UC5), the application ensures both uniqueness and insertion order of bogies using LinkedHashSet.
+In this use case (UC6), the application associates each bogie with its seating or load capacity using a HashMap.
 
-🎯 Use Case 5: Preserve Insertion Order of Bogies
+🎯 Use Case 6: Map Bogie to Capacity
 🧑 Actor
 
 User
@@ -10,31 +12,35 @@ User
 🔄 Flow
 
 User runs the program
-Bogies are added to the formation
-Duplicate bogie is attempted
-LinkedHashSet stores only unique elements
-Formation is displayed in insertion order
+Bogie-capacity mapping is created
+Entries are inserted into HashMap
+System iterates through the map
+Bogie capacities are displayed
+Program continues
 
 💻 Features Implemented
 
-Maintains insertion order of bogies
-Prevents duplicate entries
-Displays final train formation
-Ensures predictable output
+Mapping bogies to their capacities
+Storing data using key–value pairs
+Displaying both bogie names and capacities
+Efficient lookup structure
 
 🧠 Concepts Used
 
-LinkedHashSet – Maintains insertion order with uniqueness
-Set Interface – Prevents duplicate elements
-add() – Adds elements to the set
-Automatic Deduplication – Ignores duplicate entries
-Ordered Iteration – Maintains sequence of insertion
+HashMap – Stores data in key–value pairs
+Map Interface – Represents mapping structure
+put() – Inserts key–value pairs
+entrySet() – Iterates through map entries
+Key–Value Association – Links bogie with capacity
+Fast Lookup – Efficient retrieval using keys
 
 📊 Sample Output
 
 === Train Consist Management App ===
-Final Train Formation (Insertion Order Preserved):
-[Engine, Sleeper, Cargo, Guard]
+Bogie Capacity Details:
+Bogie: Sleeper | Capacity: 72
+Bogie: AC Chair | Capacity: 60
+Bogie: First Class | Capacity: 40
 Program continues...
 
 🚀 How to Run
@@ -45,7 +51,7 @@ Run using java TrainConsistApp
 
 🌱 Key Benefits
 
-Prevents duplicate bogies
-Maintains real-world train order
-Combines ordering with uniqueness
-Ensures consistent and predictable train formation
+Associates real-world data with bogies
+Enables structured data representation
+Supports efficient lookup and validation
+Forms the base for analytics and planning
