@@ -1,54 +1,34 @@
 import java.util.*;
 
-// Custom Runtime Exception
-class CargoSafetyException extends RuntimeException {
-    public CargoSafetyException(String message) {
-        super(message);
-    }
-}
-
-// Goods Bogie class
-class GoodsBogie {
-    String type;
-    String cargo;
-
-    GoodsBogie(String type) {
-        this.type = type;
-    }
-
-    // Cargo assignment with safety check
-    void assignCargo(String cargo) {
-        try {
-            if (type.equals("Rectangular") && cargo.equals("Petroleum")) {
-                throw new CargoSafetyException("Unsafe cargo assignment: Petroleum not allowed in Rectangular bogie");
-            }
-            this.cargo = cargo;
-            System.out.println("Cargo assigned successfully: " + cargo);
-
-        } catch (CargoSafetyException e) {
-            System.out.println("Error: " + e.getMessage());
-
-        } finally {
-            System.out.println("Cargo assignment process completed.");
-        }
-    }
-}
-
 public class TrainConsistApp {
 
     public static void main(String[] args) {
 
         System.out.println("=== Train Consist Management App ===");
 
-        GoodsBogie b1 = new GoodsBogie("Cylindrical");
-        GoodsBogie b2 = new GoodsBogie("Rectangular");
+        // Passenger bogie capacities
+        int[] capacities = {72, 56, 24, 70, 60};
 
-        // Safe assignment
-        b1.assignCargo("Petroleum");
+        // Bubble Sort Algorithm
+        int n = capacities.length;
 
-        // Unsafe assignment
-        b2.assignCargo("Petroleum");
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (capacities[j] > capacities[j + 1]) {
+                    // swap
+                    int temp = capacities[j];
+                    capacities[j] = capacities[j + 1];
+                    capacities[j + 1] = temp;
+                }
+            }
+        }
 
-        System.out.println("Program continues...");
+        // Display sorted array
+        System.out.println("Sorted Capacities:");
+        for (int cap : capacities) {
+            System.out.print(cap + " ");
+        }
+
+        System.out.println("\nProgram continues...");
     }
 }

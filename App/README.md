@@ -1,34 +1,30 @@
-# 🚆 Train Consist Management App – UC15
+# 🚆 Train Consist Management App – UC16
 
 Overview:
-This use case handles unsafe cargo assignments using try-catch-finally.
+This use case demonstrates manual sorting using the Bubble Sort algorithm.
 
 Use Case:
-- Assign cargo to goods bogie
-- Validate cargo compatibility
-- Throw exception if unsafe
-- Catch and handle exception
-- Execute finally block
+- Create array of capacities
+- Compare adjacent elements
+- Swap if out of order
+- Repeat passes
+- Display sorted result
 
 Concepts Used:
-- try-catch-finally
-- Runtime Exception
-- Custom Exception
-- Graceful Failure Handling
-
-Rule:
-Rectangular bogie → Petroleum NOT allowed
+- Bubble Sort
+- Nested Loops
+- Array Manipulation
+- Swapping Logic
 
 Sample Output:
-Cargo assigned successfully: Petroleum
-Error: Unsafe cargo assignment
-Cargo assignment process completed.
+Sorted Capacities:
+24 56 60 70 72
 
 How to Run:
 javac TrainConsistApp.java
 java TrainConsistApp
 
 Key Benefits:
-- Prevents runtime crashes
-- Ensures safe operations
-- Demonstrates exception handling
+- Understand sorting internals
+- Improves algorithm skills
+- No library functions used
