@@ -1,30 +1,28 @@
-# 🚆 Train Consist Management App – UC16
+# 🚆 Train Consist Management App – UC17
 
 Overview:
-This use case demonstrates manual sorting using the Bubble Sort algorithm.
+This use case demonstrates sorting bogie names using Arrays.sort().
 
 Use Case:
-- Create array of capacities
-- Compare adjacent elements
-- Swap if out of order
-- Repeat passes
+- Create array of bogie names
+- Call Arrays.sort()
 - Display sorted result
 
 Concepts Used:
-- Bubble Sort
-- Nested Loops
-- Array Manipulation
-- Swapping Logic
+- Arrays.sort()
+- Natural Ordering
+- O(n log n) Sorting
+- Java Standard Library
 
 Sample Output:
-Sorted Capacities:
-24 56 60 70 72
+Sorted Bogie Names:
+[AC Chair, First Class, General, Luxury, Sleeper]
 
 How to Run:
 javac TrainConsistApp.java
 java TrainConsistApp
 
 Key Benefits:
-- Understand sorting internals
-- Improves algorithm skills
-- No library functions used
+- Faster than manual sorting
+- Clean and simple code
+- Uses optimized Java algorithms
