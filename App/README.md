@@ -1,41 +1,58 @@
-Use Case 1: Initialize Train and Display Consist Summary
+The Train Consist Management App is a console-based Java application that simulates how a railway system manages a train’s consist, which is a collection of bogies attached to an engine.
+
+In this use case, the application focuses on dynamically managing passenger bogies using ArrayList operations.
+
+🎯 Use Case 2: Add Passenger Bogies to Train
 🧑 Actor
 
 User
 
 🔄 Flow
+
 User runs the program
-Application displays a welcome message
-Train consist is initialized
-Initial bogie count is displayed
-Program continues execution
+Passenger bogies are added
+Bogies are displayed
+One bogie is removed
+Existence of a bogie is checked
+Program continues
+
 💻 Features Implemented
-Console-based application startup
-Initialization of train consist using dynamic collection
-Display of initial bogie count
-Simple and clear output messages
+
+Dynamic addition of passenger bogies
+Removal of a bogie from the list
+Checking whether a bogie exists
+Displaying the list before and after operations
+
 🧠 Concepts Used
-Class: Defines the structure of the application
-Main Method: Entry point of the Java program
-Static Keyword: Allows JVM to execute main() without object creation
-ArrayList: Dynamic data structure to store bogies
-List Interface: Provides abstraction for list implementations
-Console Output: Uses System.out.println() for display
-Dynamic Initialization: Starts with an empty collection for future updates
+
+ArrayList – A resizable collection that allows dynamic insertion and deletion
+add() – Used to insert elements into the list
+remove() – Used to delete elements from the list
+contains() – Used to check if an element exists
+Insertion Order – Maintains the order of elements
+CRUD Operations – Demonstrates Create, Read, and Delete operations
+
 📊 Sample Output
 
 === Train Consist Management App ===
-Train consist initialized successfully.
-Initial number of bogies: 0
-System ready for further operations...
+Passenger Bogies after addition:
+[Sleeper, AC Chair, First Class]
+After removing AC Chair:
+[Sleeper, First Class]
+Is Sleeper bogie present? true
+Final Passenger Bogies List:
+[Sleeper, First Class]
+Program continues...
 
 🚀 How to Run
+
 Save the file as TrainConsistApp.java
-Compile the program using: javac TrainConsistApp.java
-Run the program using: java TrainConsistApp
-🌱 Future Enhancements
-Add passenger bogies (Sleeper, AC Chair, First Class)
-Add goods bogies (Rectangular, Cylindrical)
-Implement capacity tracking
-Add safety validation for cargo
-Display complete train consist details
+Compile using javac TrainConsistApp.java
+Run using java TrainConsistApp
+
+🌱 Key Benefits
+
+Demonstrates real-world list management
+Shows how collections grow dynamically
+Introduces CRUD operations
+Helps visualize how bogies are added and removed
